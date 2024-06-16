@@ -1,0 +1,98 @@
+@use 'base';
+@import 'variable';
+@import 'maxin';
+@import 'header';
+@import 'section';
+@import 'education';
+@import 'services';
+@import 'testimonial';
+@import 'contact';
+ 
+
+html{
+    font-size: 60%;
+    overflow-x:hidden;
+
+    @include mq(1285px){
+        font-size: 55%;
+       
+    }
+   
+}
+
+body{
+    background:$bgColor;
+    color:$textColor;  
+
+  
+
+    span{
+        color:$mainColor;
+    }
+
+    .social-icons {
+
+        a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4.5rem;
+            height: 4.5rem;
+            background-color: transparent;
+            border: 2px solid $mainColor;
+            font-size: 2.5rem;
+            border-radius: 50%;
+            color: $mainColor;
+            margin:3rem 1.5rem 3rem 0;
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                color:$textColor;
+                transform: scale(1.3) translateY(-5px);
+                box-sizing: 0 0 25px $mainColor;
+                background-color: $mainColor;
+            }
+        }
+    }
+
+    .btn{
+        display: inline-block;
+        padding: 1rem 2.8rem;
+        background:$mainColor;
+        box-shadow: 0 0 25px $mainColor ;
+        border-radius: 4rem;
+        font-size: 1.6rem;
+        color:black;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 50px $mainColor;
+        }
+    }
+    .btn-gruop{
+        display: flex;
+        align-items: center;
+        gap:1.5rem;
+
+        a:nth-of-type(2){
+            background-color: black;
+            color:$mainColor;
+            border:2px solid $mainColor;
+            box-shadow: 0 0 25px transparent;
+            
+            &:hover{
+                color:black;
+                box-shadow: 0 0 25px $mainColor;
+                background-color: $mainColor;
+            }
+            
+            }
+    }
+    
+  
+  
+}

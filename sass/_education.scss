@@ -1,0 +1,151 @@
+
+
+.heading{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+  
+
+}
+.education{
+    padding: 100px 15px;
+    background:$bgColor;
+
+    h2{
+        margin-bottom: 5rem;
+        @include mq(500px){
+           
+          
+            font-size: 4.5rem;
+         
+       }
+    }
+    .timeline-items{
+        
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position:relative;
+
+        .timeline-item{
+            margin-bottom: 40px;
+          
+            width:100%;
+            position:relative;
+
+            &:last-child{
+              margin-bottom: 0;
+            }
+            &:nth-child(odd){
+                padding-right: calc(50% + 30px);
+                text-align: right;
+
+                @include mq(991px){
+                        padding-right: 0px;
+                        text-align: left;
+                        padding-left: 37px;
+                         
+                         
+ 
+                }
+            }
+            &:nth-child(even){
+                padding-left: calc(50% + 30px);
+                @include mq(991px){
+                   
+                    padding-left: 37px;
+                     
+
+            }
+            }
+
+           
+
+            .timeline-dot{
+                height: 21px;
+                width:21px;
+                background-color: $mainColor;
+                box-shadow: 0 0 25px $mainColor,
+                            0 0 50px $mainColor;
+                position:absolute;
+                left:calc(50% - 9px);
+                border-radius: 50%;
+                top:10px;
+
+                @include mq(991px){
+                   
+                   left:0;
+                     
+
+            }
+            }
+
+            .timeline-date{
+                font-size: 20px;
+                font-weight: 800;
+                color:#ffff;
+                margin:6px 0 15px;
+            }
+            .timeline-content{
+                background-color: $bgColor;
+                border:3px solid $mainColor;
+                padding:30px 50px;
+                border-radius: 4rem;
+                box-shadow: 0 0 10px $mainColor;
+                cursor: pointer;  
+                transition:0.3s ease-in-out;
+                
+                &:hover{
+                    transform:scale(1.05);
+                    box-shadow: 0 0 25px $mainColor;
+                }
+
+                h3{
+                    font-size: 20px;
+                    color:#fff;
+                    margin:0 0 10px;
+                    font-weight: 500;
+                }
+                p{
+                    color:#fff;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 22px;
+                }
+           
+            }
+
+          
+
+        }
+  
+    }
+    .timeline-items::before{
+        content:"";
+        position:absolute;
+        width:5px;
+        height: 100%;
+        background:$mainColor;
+        left:calc(50% - 1px);
+        
+       @include mq(991px){
+        left:7px;
+       }
+    }
+
+    
+  
+}
+::-webkit-scrollbar{
+    width:10px;
+   
+}
+::-webkit-scrollbar-thumb{
+    background-color: $mainColor;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: $bgColor;
+    width:50px;
+}
